@@ -1,12 +1,13 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 import LinkView from '@/components/LinkComponent.vue'
+import LogoView from './LogoView.vue';
 </script>
 <template>
   <header class="px-10 py-5 bg-gray-700 flex justify-between absolute top-0 w-full z-10">
-    <div>
-      <h1 class="text-3xl font-black text-white">Pos <span class="text-green-400">Vue.js</span></h1>
-    </div>
+    <LogoView />
     <nav>
+      <router-link class="rounded text-white font-bold p-2" :to="{name: 'products'}" > Productos </router-link>
       <LinkView to="shop">Ir a tienda</LinkView>
     </nav>
   </header>
